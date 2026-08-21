@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<path d="M50 15 C65 35 75 45 75 60 A25 25 0 1 1 25 60 C25 45 35 35 50 15Z"
-fill="#175EA8"/>
-<path d="M15 80 Q50 70 85 80"
-stroke="#0A3D78"
-stroke-width="4"
-fill="none"/>
-</svg>
