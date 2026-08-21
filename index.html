@@ -555,13 +555,6 @@
       text-align: center;
     }
 
-    .survey-error {
-      margin: 1px 0 0;
-      color: #a33030;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
     form .button {
       width: 100%;
       border: 0;
@@ -922,8 +915,8 @@
             <input id="lokalita" type="text" name="lokalita" placeholder="Např. Pohořelice, parc. č. 123/4" required>
           </label>
 
-          <fieldset class="survey-fieldset" aria-describedby="survey-help survey-error">
-            <legend>Jaké průzkumy potřebujete?</legend>
+          <fieldset class="survey-fieldset" aria-describedby="survey-help">
+            <legend>Jaké průzkumy potřebujete? <span class="optional">(nepovinné)</span></legend>
             <p class="survey-help" id="survey-help">Lze vybrat více možností.</p>
 
             <label class="check-option featured">
@@ -971,7 +964,6 @@
               <span>Nevím – potřebuji poradit</span>
             </label>
 
-            <p class="survey-error" id="survey-error" role="alert" hidden>Vyberte alespoň jednu možnost.</p>
           </fieldset>
 
           <label for="zprava">
@@ -1004,28 +996,6 @@
     <div>IČO: 68705743 • DIČ: CZ7103133829</div>
   </div>
 </footer>
-
-<script>
-  const demandForm = document.querySelector('#poptavka form');
-  const surveyOptions = [...demandForm.querySelectorAll('input[name="pruzkum"]')];
-  const surveyError = document.querySelector('#survey-error');
-
-  surveyOptions.forEach((option) => {
-    option.addEventListener('change', () => {
-      if (surveyOptions.some((item) => item.checked)) {
-        surveyError.hidden = true;
-      }
-    });
-  });
-
-  demandForm.addEventListener('submit', (event) => {
-    if (!surveyOptions.some((option) => option.checked)) {
-      event.preventDefault();
-      surveyError.hidden = false;
-      surveyOptions[0].focus();
-    }
-  });
-</script>
 
 </body>
 </html>
