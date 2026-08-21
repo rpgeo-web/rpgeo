@@ -271,16 +271,22 @@
     /* SERVICES */
     .services {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1px;
       background: var(--line);
       border: 1px solid var(--line);
     }
 
     .service {
+      grid-column: span 2;
       background: white;
       padding: 30px;
       min-height: 190px;
+    }
+
+    .service:nth-child(4),
+    .service:nth-child(5) {
+      grid-column: span 3;
     }
 
     .service h3 {
@@ -294,9 +300,40 @@
       font-size: 15px;
     }
 
-    .service-link {
-      display: inline-block;
+    .service-details {
       margin-top: 18px;
+    }
+
+    .service-details summary {
+      width: fit-content;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .service-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .service-details summary::after {
+      content: " +";
+    }
+
+    .service-details[open] summary::after {
+      content: " −";
+    }
+
+    .service-details p {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-cta {
+      display: inline-block;
+      margin-top: 14px;
       color: var(--green);
       font-weight: 700;
       font-size: 14px;
@@ -605,6 +642,12 @@
         grid-template-columns: 1fr;
       }
 
+      .service,
+      .service:nth-child(4),
+      .service:nth-child(5) {
+        grid-column: auto;
+      }
+
       .steps {
         grid-template-columns: 1fr 1fr;
       }
@@ -729,7 +772,14 @@
           <p>
             Posouzení geologických a základových poměrů pozemku pro návrh stavby.
           </p>
-          <a class="service-link" href="#">Více informací →</a>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Průzkum ověřuje skladbu a vlastnosti zemin a hornin, výskyt podzemní vody
+              a základové poměry. Výstupem je odborná zpráva s podklady pro návrh založení stavby.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
         </article>
 
         <article class="service">
@@ -737,7 +787,14 @@
           <p>
             Posouzení podzemních vod a hydrogeologických poměrů lokality.
           </p>
-          <a class="service-link" href="#">Více informací →</a>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Posouzení hydrogeologických poměrů, podzemní vody a jejího možného ovlivnění
+              stavbou. Rozsah se stanoví podle konkrétního záměru, například studny nebo vsakování.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
         </article>
 
         <article class="service">
@@ -745,7 +802,14 @@
           <p>
             Ověření podmínek pro vsakování srážkových vod do horninového prostředí.
           </p>
-          <a class="service-link" href="#">Více informací →</a>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Terénní zkouška ověří skutečnou schopnost horninového prostředí přijímat
+              srážkové vody. Výsledek slouží jako podklad pro návrh vsakovacího zařízení.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
         </article>
 
         <article class="service">
@@ -753,7 +817,14 @@
           <p>
             Stanovení radonového indexu pozemku pro potřeby výstavby.
           </p>
-          <a class="service-link" href="#">Více informací →</a>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Stanovení radonového indexu pozemku před zahájením stavby a měření radonu
+              v dokončených objektech, včetně kolaudačního měření.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
         </article>
 
         <article class="service">
@@ -761,7 +832,14 @@
           <p>
             Podklady pro odnětí půdy ze zemědělského půdního fondu.
           </p>
-          <a class="service-link" href="#">Více informací →</a>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Posouzení půdního profilu a zpracování podkladů pro řízení o odnětí půdy
+              ze zemědělského půdního fondu.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
         </article>
 
       </div>
