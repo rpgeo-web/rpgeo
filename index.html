@@ -1,56 +1,1170 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RPGEO | Ing. Radek Pohanka</title>
-<meta name="description" content="Inženýrská geologie, hydrogeologie, radonové a pedologické průzkumy.">
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<style>
-:root{--blue:#0A3D78;--blue2:#175EA8;--green:#7BC043;--bg:#F7F9FC;--text:#2C2C2C}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}.container{width:min(1200px,92%);margin:auto}.hero{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;padding:70px 0}.hero-content{display:flex;gap:50px;flex-wrap:wrap;align-items:center}.logo img{width:260px;max-width:100%;background:#fff;padding:10px;border-radius:16px}.hero h1{font-size:4rem}.buttons a{display:inline-block;margin:5px;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700}.btn-phone{background:var(--green);color:#fff}.btn-mail{background:#fff;color:var(--blue)}section{padding:70px 0}.section-title{text-align:center;color:var(--blue);margin-bottom:40px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}.card{background:#fff;padding:28px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.08)}.icon img{width:72px;height:72px}.area{text-align:center;background:#fff}.contact{background:var(--blue);color:#fff;text-align:center}.contact a{color:#fff}.form-wrap{max-width:700px;margin:auto}form{display:flex;flex-direction:column;gap:14px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-weight:650}.required-mark{color:#b42318}input,textarea{width:100%;padding:14px;border:1px solid #aaa;border-radius:8px;font:inherit;background:#fff}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus{outline:3px solid rgba(0,94,184,.18);border-color:var(--blue)}input[aria-invalid="true"],textarea[aria-invalid="true"]{border:2px solid #b42318;background:#fff8f7}.field-error{display:none;color:#b42318;font-size:.92rem;font-weight:600}.field-error.visible{display:block}.form-error-summary{display:none;padding:12px 14px;border-left:4px solid #b42318;border-radius:6px;background:#fff0ee;color:#7a271a;font-weight:650}.form-error-summary.visible{display:block}button{background:var(--green);color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.94)}footer{background:#082c57;color:#fff;text-align:center;padding:20px}@media(max-width:768px){.hero h1{font-size:2.5rem}.hero-content{text-align:center;justify-content:center}}</style>
-</head>
-<body>
-<section class="hero"><div class="container"><div class="hero-content"><div class="logo"><img src="logo.png" alt="RPGEO"></div><div><h1>RPGEO</h1><p><strong>Ing. Radek Pohanka</strong></p><p>Inženýrská geologie • Hydrogeologie • Radonové průzkumy</p><p><em>Spolehlivé podklady pro vaši stavbu.</em></p><div class="buttons"><a class="btn-phone" href="tel:+420608405004">📞 Zavolat</a><a class="btn-mail" href="mailto:rpgeo@rpgeo.cz">✉️ Napsat e-mail</a></div></div></div></div></section>
-<section><div class="container"><h2 class="section-title">Nabízené služby</h2><div class="cards"><div class="card"><div class="icon"><img src="icons/geo.svg"></div><h3>Inženýrskogeologické průzkumy</h3><p>Inženýrskogeologické průzkumy poskytují podrobné informace o geologických a základových poměrech v místě plánované stavby.</p></div><div class="card"><div class="icon"><img src="icons/hydro.svg"></div><h3>Hydrogeologické průzkumy a posudky</h3><p>Hydrogeologické průzkumy a posudky poskytují informace o hydrogeologických poměrech území.</p></div><div class="card"><div class="icon"><img src="icons/radon.svg"></div><h3>Radonové průzkumy</h3><p>Stanovení radonového indexu pozemku jako podklad pro projektanta.</p></div><div class="card"><div class="icon"><img src="icons/pedo.svg"></div><h3>Pedologické průzkumy</h3><p>Podklad pro řízení o odnětí půdy ze zemědělského půdního fondu.</p></div></div></div></section>
-<section class="area"><div class="container"><h2 class="section-title">Oblast působnosti</h2><p><strong>Jihomoravský kraj</strong>, zejména v okresech
-<strong>Brno-město, Brno-venkov, Břeclav, Blansko, Hodonín, Vyškov a Znojmo</strong>.
-<br>Po dohodě i další regiony České republiky.</p></div></section>
-<section class="contact"><div class="container"><h2>Kontakt</h2><p>📞 +420 608 405 004</p><p>✉️ <a href="mailto:rpgeo@rpgeo.cz">rpgeo@rpgeo.cz</a></p><p>📍 Znojemská 805, 691 23 Pohořelice</p><p>IČ: 68705743</p><p>DIČ: CZ7103133829</p></div></section>
-<section><div class="container"><h2 class="section-title">Poptávkový formulář</h2><div class="form-wrap"><form id="contact-form" action="https://formspree.io/f/xyegonqe" method="POST" novalidate><div id="form-error-summary" class="form-error-summary" role="alert" aria-live="polite">Poptávku nelze odeslat. Doplňte prosím zvýrazněná povinná pole.</div><div class="field"><label for="jmeno">Jméno <span class="required-mark" aria-hidden="true">*</span></label><input id="jmeno" type="text" name="jmeno" autocomplete="name" required aria-describedby="jmeno-error"><span id="jmeno-error" class="field-error">Vyplňte prosím své jméno.</span></div><div class="field"><label for="telefon">Telefon <span class="required-mark" aria-hidden="true">*</span></label><input id="telefon" type="tel" name="telefon" autocomplete="tel" required aria-describedby="telefon-error"><span id="telefon-error" class="field-error">Vyplňte prosím telefonní číslo.</span></div><div class="field"><label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="email" type="email" name="email" autocomplete="email" required aria-describedby="email-error"><span id="email-error" class="field-error">Zadejte prosím platnou e-mailovou adresu.</span></div><div class="field"><label for="zprava">Zpráva <span class="required-mark" aria-hidden="true">*</span></label><textarea id="zprava" name="zprava" required aria-describedby="zprava-error"></textarea><span id="zprava-error" class="field-error">Napište prosím, jaký průzkum potřebujete.</span></div><button type="submit">Odeslat poptávku</button><p><span class="required-mark" aria-hidden="true">*</span> Povinné údaje</p></form></div></div></section><footer>© 2026 RPGEO | Ing. Radek Pohanka | IČ: 68705743</footer><script>
-const contactForm=document.getElementById('contact-form');
-const errorSummary=document.getElementById('form-error-summary');
-const requiredFields=[...contactForm.querySelectorAll('[required]')];
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-function validateField(field){
-  const empty=!field.value.trim();
-  const invalidEmail=field.type==='email'&&!empty&&!field.validity.valid;
-  const invalid=empty||invalidEmail;
-  field.setAttribute('aria-invalid',String(invalid));
-  const error=document.getElementById(field.getAttribute('aria-describedby'));
-  if(error)error.classList.toggle('visible',invalid);
-  return !invalid;
-}
+  <title>Geologie, hydrogeologie a radon Brno | RPGEO</title>
+  <meta name="description" content="Inženýrskogeologické, hydrogeologické a radonové průzkumy pro rodinné domy a pozemky v Brně a Jihomoravském kraji. Ing. Radek Pohanka.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ing. Radek Pohanka">
+  <link rel="canonical" href="https://rpgeo.cz/">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-rpgeo.png">
+  <link rel="preload" as="image" href="images/hero-rpgeo.webp" type="image/webp">
 
-requiredFields.forEach(field=>{
-  field.addEventListener('input',()=>{
-    validateField(field);
-    if(requiredFields.every(item=>item.value.trim()&&item.validity.valid))errorSummary.classList.remove('visible');
-  });
-});
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:url" content="https://rpgeo.cz/">
+  <meta property="og:site_name" content="RPGEO">
+  <meta property="og:title" content="Geologie, hydrogeologie a radon Brno | RPGEO">
+  <meta property="og:description" content="Odborné průzkumy pro rodinné domy, stavební pozemky a další stavby v Jihomoravském kraji.">
+  <meta property="og:image" content="https://rpgeo.cz/images/hero-rpgeo.webp">
+  <meta property="og:image:alt" content="Terénní inženýrskogeologický průzkum na stavebním pozemku">
 
-contactForm.addEventListener('submit',event=>{
-  const invalidFields=requiredFields.filter(field=>!validateField(field));
-  if(invalidFields.length){
-    event.preventDefault();
-    errorSummary.classList.add('visible');
-    invalidFields[0].focus();
-  }else{
-    errorSummary.classList.remove('visible');
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "RPGEO | Ing. Radek Pohanka",
+    "url": "https://rpgeo.cz/",
+    "logo": "https://rpgeo.cz/images/logo-rpgeo.png",
+    "image": "https://rpgeo.cz/images/hero-rpgeo.webp",
+    "telephone": "+420608405004",
+    "email": "rpgeo@rpgeo.cz",
+    "founder": {
+      "@type": "Person",
+      "name": "Ing. Radek Pohanka"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Znojemská 805",
+      "postalCode": "691 23",
+      "addressLocality": "Pohořelice",
+      "addressRegion": "Jihomoravský kraj",
+      "addressCountry": "CZ"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "IČO",
+      "value": "68705743"
+    },
+    "vatID": "CZ7103133829",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Jihomoravský kraj" },
+      { "@type": "City", "name": "Brno" },
+      { "@type": "AdministrativeArea", "name": "Brno-venkov" },
+      { "@type": "AdministrativeArea", "name": "Břeclav" },
+      { "@type": "AdministrativeArea", "name": "Blansko" },
+      { "@type": "AdministrativeArea", "name": "Hodonín" },
+      { "@type": "AdministrativeArea", "name": "Vyškov" },
+      { "@type": "AdministrativeArea", "name": "Znojmo" }
+    ]
   }
-});
-</script></body></html>
+  </script>
+
+  <style>
+    :root {
+      --green: #315f4a;
+      --green-dark: #244938;
+      --text: #26312c;
+      --muted: #69736e;
+      --light: #f3f5f3;
+      --line: #dfe5e1;
+      --white: #ffffff;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      flex: 0 0 46px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 21px;
+      line-height: 1.05;
+      letter-spacing: .03em;
+    }
+
+    .brand-copy small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: .08em;
+      margin-top: 3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #4e5853;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .nav-button {
+      background: var(--green);
+      color: white !important;
+      padding: 11px 17px;
+      border-radius: 4px;
+    }
+
+    .nav-button:hover {
+      background: var(--green-dark);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 92px 0 86px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.88) 52%, rgba(255,255,255,.35) 100%),
+        url("images/hero-rpgeo.webp") center/cover no-repeat;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -.025em;
+      font-weight: 700;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 20px;
+      color: #4f5954;
+      margin: 0 0 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 4px;
+      background: var(--green);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background: var(--green-dark);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .button.secondary:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .location {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 78px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      margin: 0 0 13px;
+      font-size: clamp(29px, 4vw, 39px);
+      line-height: 1.15;
+      letter-spacing: -.02em;
+    }
+
+    .section-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .service {
+      grid-column: span 2;
+      background: white;
+      padding: 30px;
+      min-height: 190px;
+    }
+
+    .service:nth-child(4),
+    .service:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    .service h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .service-details {
+      margin-top: 18px;
+    }
+
+    .service-details summary {
+      width: fit-content;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .service-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .service-details summary::after {
+      content: " +";
+    }
+
+    .service-details[open] summary::after {
+      content: " −";
+    }
+
+    .service-details p {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-cta {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #59635e;
+      margin: 0 0 16px;
+    }
+
+    .signature {
+      margin-top: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* HOW */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .step-number {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--green);
+      color: white;
+    }
+
+    .cta .section-intro {
+      color: rgba(255,255,255,.82);
+    }
+
+    .cta .button {
+      background: white;
+      color: var(--green);
+      margin-top: 25px;
+    }
+
+    .cta .button:hover {
+      background: #eef2ef;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding-bottom: 60px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .coverage {
+      max-width: 520px;
+      margin: 27px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .coverage strong {
+      color: var(--text);
+    }
+
+    .contact-item {
+      font-size: 17px;
+    }
+
+    .contact-item strong {
+      display: inline-block;
+      width: 80px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    .form-card {
+      background: var(--light);
+      padding: 30px;
+      align-self: start;
+    }
+
+    .form-card h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      margin: 0 0 22px;
+      font-size: 15px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .optional {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .required-mark {
+      color: #b42318;
+    }
+
+    .form-error-summary {
+      display: none;
+      margin: 0;
+      padding: 11px 13px;
+      border: 1px solid #d92d20;
+      border-left-width: 4px;
+      border-radius: 4px;
+      background: #fff4f2;
+      color: #7a271a;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .form-error-summary.visible {
+      display: block;
+    }
+
+    .field-error {
+      display: none;
+      color: #b42318;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .field-error.visible {
+      display: block;
+    }
+
+    input:not([type="checkbox"]),
+    textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #cbd3ce;
+      border-radius: 4px;
+      background: white;
+      color: var(--text);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    input:not([type="checkbox"]):focus,
+    textarea:focus {
+      outline: 3px solid rgba(49,95,74,.15);
+      border-color: var(--green);
+    }
+
+    input:not([type="checkbox"])[aria-invalid="true"],
+    textarea[aria-invalid="true"] {
+      border-color: #d92d20;
+      background: #fff8f7;
+    }
+
+    input:not([type="checkbox"])[aria-invalid="true"]:focus,
+    textarea[aria-invalid="true"]:focus {
+      outline-color: rgba(217,45,32,.18);
+    }
+
+    .survey-fieldset {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .survey-fieldset legend {
+      margin-bottom: 3px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .survey-help {
+      margin: -3px 0 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .check-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid #cbd3ce;
+      border-radius: 4px;
+      background: white;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .check-option:hover {
+      border-color: var(--green);
+    }
+
+    .check-option.featured {
+      border-color: var(--green);
+      background: #f4f8f5;
+    }
+
+    .check-option input {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      margin: 1px 0 0;
+      accent-color: var(--green);
+    }
+
+    .check-option input:focus-visible {
+      outline: 3px solid rgba(49,95,74,.22);
+      outline-offset: 2px;
+    }
+
+    .check-option small {
+      display: block;
+      margin-top: 2px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .choice-divider {
+      margin: 1px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    form .button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      margin-top: 3px;
+    }
+
+    .privacy-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .hp {
+      position: absolute;
+      left: -9999px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      nav a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 70px 0;
+      }
+
+      .services,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service,
+      .service:nth-child(4),
+      .service:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-photo {
+        min-height: 280px;
+        order: 2;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav {
+        min-height: 65px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+      }
+
+      .brand-copy strong {
+        font-size: 18px;
+      }
+
+      .nav-button {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 58px 0;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#" aria-label="RPGEO – úvodní stránka">
+      <img src="images/logo-rpgeo.png" alt="" width="46" height="46" aria-hidden="true">
+      <span class="brand-copy">
+        <strong>RPGEO</strong>
+        <small>Ing. Radek Pohanka</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#sluzby">Služby</a>
+      <a href="#omne">O mně</a>
+      <a href="#postup">Jak to probíhá</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav-button" href="#poptavka">Poptat průzkum</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Inženýrská geologie • Hydrogeologie • Radon</div>
+
+        <h1>Spolehlivé podklady pro vaši stavbu.</h1>
+
+        <p>
+          Odborné průzkumy pro rodinné domy, stavební pozemky a další stavby.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#poptavka">Poptat průzkum</a>
+          <a class="button secondary" href="tel:+420608405004">+420 608 405 004</a>
+        </div>
+
+        <div class="location">
+          Jihomoravský kraj
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sluzby">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nabízím</h2>
+        <p class="section-intro">
+          Průzkumy a odborné posudky pro stavební záměry a pozemky.
+        </p>
+      </div>
+
+      <div class="services">
+
+        <article class="service">
+          <h3>Inženýrskogeologické průzkumy</h3>
+          <p>
+            Posouzení geologických a základových poměrů pozemku pro návrh stavby.
+          </p>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Průzkum ověřuje skladbu a vlastnosti zemin a hornin, výskyt podzemní vody
+              a základové poměry. Výstupem je odborná zpráva s podklady pro návrh založení stavby.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
+        </article>
+
+        <article class="service">
+          <h3>Hydrogeologické průzkumy</h3>
+          <p>
+            Posouzení podzemních vod a hydrogeologických poměrů lokality.
+          </p>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Posouzení hydrogeologických poměrů, podzemní vody a jejího možného ovlivnění
+              stavbou. Rozsah se stanoví podle konkrétního záměru, například studny nebo vsakování.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
+        </article>
+
+        <article class="service">
+          <h3>Vsakovací zkoušky</h3>
+          <p>
+            Ověření podmínek pro vsakování srážkových vod do horninového prostředí.
+          </p>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Terénní zkouška ověří skutečnou schopnost horninového prostředí přijímat
+              srážkové vody. Výsledek slouží jako podklad pro návrh vsakovacího zařízení.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
+        </article>
+
+        <article class="service">
+          <h3>Radonové průzkumy</h3>
+          <p>
+            Stanovení radonového indexu pozemku pro potřeby výstavby.
+          </p>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Stanovení radonového indexu pozemku před zahájením stavby a měření radonu
+              v dokončených objektech, včetně kolaudačního měření.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
+        </article>
+
+        <article class="service">
+          <h3>Pedologické průzkumy</h3>
+          <p>
+            Podklady pro odnětí půdy ze zemědělského půdního fondu.
+          </p>
+          <details class="service-details">
+            <summary>Více informací</summary>
+            <p>
+              Posouzení půdního profilu a zpracování podkladů pro řízení o odnětí půdy
+              ze zemědělského půdního fondu.
+            </p>
+            <a class="service-cta" href="#poptavka">Poptat tuto službu →</a>
+          </details>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="omne" class="about">
+    <div class="container about-grid">
+
+      <img class="about-photo" src="images/about-rpgeo.webp" alt="Kontrola a dokumentace vzorků zemin při terénním průzkumu" loading="lazy" width="1100" height="1100">
+
+      <div class="about-text">
+        <h2>Ing. Radek Pohanka</h2>
+
+        <p>
+          Geologickým průzkumům se věnuji dlouhodobě. Zaměřuji se především
+          na průzkumy pro rodinné domy a stavební pozemky.
+        </p>
+
+        <p>
+          Zakládám si na odborném zpracování, individuálním přístupu
+          a efektivním rozsahu průzkumných prací.
+        </p>
+
+        <p>
+          Cílem je získat pro projektanta i stavebníka spolehlivé informace
+          o skutečných podmínkách konkrétní lokality.
+        </p>
+
+        <div class="signature">
+          RPGEO | Ing. Radek Pohanka
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="postup">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Jak to probíhá</h2>
+        <p class="section-intro">
+          Jednoduše od první poptávky až po hotovou dokumentaci.
+        </p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Poptávka</h3>
+          <p>Pošlete parcelní číslo, lokalitu a stručný popis záměru.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Návrh průzkumu</h3>
+          <p>Navrhnu vhodný rozsah prací podle konkrétní situace.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Terénní práce</h3>
+          <p>Provedu potřebné sondáže, měření nebo zkoušky.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Dokumentace</h3>
+          <p>Výsledky odborně vyhodnotím a zpracuji do závěrečné zprávy.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="section-head">
+        <h2>Potřebujete odborný průzkum?</h2>
+        <p class="section-intro">
+          Pošlete mi parcelní číslo, lokalitu a stručně popište, co plánujete.
+          Navrhnu vhodný rozsah průzkumu.
+        </p>
+
+        <a class="button" href="#poptavka">Nezávazně poptat průzkum</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="container contact-grid">
+
+      <div>
+        <div class="section-head">
+          <h2>Kontakt</h2>
+          <p class="section-intro">
+            Nevíte přesně, jaký průzkum potřebujete? Nevadí. Stačí popsat váš záměr.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <strong>Telefon</strong>
+            <a href="tel:+420608405004">+420 608 405 004</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>E-mail</strong>
+            <a href="mailto:rpgeo@rpgeo.cz">rpgeo@rpgeo.cz</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Místo</strong>
+            Pohořelice, Jihomoravský kraj
+          </div>
+        </div>
+
+        <p class="coverage">
+          <strong>Oblast působnosti:</strong> celý Jihomoravský kraj, zejména
+          Brno, Brno-venkov, Břeclav, Blansko, Hodonín, Vyškov a Znojmo.
+          Po dohodě také další regiony České republiky.
+        </p>
+      </div>
+
+      <div class="form-card" id="poptavka">
+        <h3>Nezávazná poptávka</h3>
+        <p class="form-intro">
+          Stačí základní údaje. Ozvu se vám s návrhem dalšího postupu.
+        </p>
+
+        <form id="contact-form" action="https://formspree.io/f/xyegonqe" method="POST" novalidate>
+          <p id="form-error-summary" class="form-error-summary" role="alert" aria-live="polite">
+            Poptávku nelze odeslat. Doplňte prosím červeně označená povinná pole.
+          </p>
+
+          <label for="jmeno">
+            <span>Jméno <span class="required-mark" aria-hidden="true">*</span></span>
+            <input id="jmeno" type="text" name="jmeno" autocomplete="name" required aria-describedby="jmeno-error" data-required-message="Vyplňte prosím své jméno.">
+            <span id="jmeno-error" class="field-error"></span>
+          </label>
+
+          <label for="email">
+            <span>E-mail <span class="required-mark" aria-hidden="true">*</span></span>
+            <input id="email" type="email" name="email" autocomplete="email" required aria-describedby="email-error" data-required-message="Vyplňte prosím svůj e-mail." data-invalid-message="Zadejte platnou e-mailovou adresu, například jmeno@example.cz.">
+            <span id="email-error" class="field-error"></span>
+          </label>
+
+          <label for="telefon">
+            <span>Telefon <span class="optional">(nepovinný)</span></span>
+            <input id="telefon" type="tel" name="telefon" autocomplete="tel">
+          </label>
+
+          <label for="lokalita">
+            <span>Lokalita nebo parcelní číslo <span class="required-mark" aria-hidden="true">*</span></span>
+            <input id="lokalita" type="text" name="lokalita" placeholder="Např. Pohořelice, parc. č. 123/4" required aria-describedby="lokalita-error" data-required-message="Vyplňte prosím lokalitu nebo parcelní číslo.">
+            <span id="lokalita-error" class="field-error"></span>
+          </label>
+
+          <fieldset class="survey-fieldset" aria-describedby="survey-help">
+            <legend>Jaké průzkumy potřebujete? <span class="optional">(nepovinné)</span></legend>
+            <p class="survey-help" id="survey-help">Lze vybrat více možností.</p>
+
+            <label class="check-option featured">
+              <input type="checkbox" name="pruzkum" value="Kompletní průzkum pro rodinný dům – IG + HG + radonový průzkum pozemku">
+              <span>
+                <strong>Kompletní průzkum pro rodinný dům – IG + HG + radonový průzkum pozemku</strong>
+                <small>Nejčastější volba</small>
+              </span>
+            </label>
+
+            <div class="choice-divider">nebo vyberte jednotlivě</div>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Inženýrskogeologický průzkum">
+              <span>Inženýrskogeologický průzkum</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Hydrogeologický průzkum nebo posudek">
+              <span>Hydrogeologický průzkum nebo posudek</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Vsakovací zkouška">
+              <span>Vsakovací zkouška</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Radonový průzkum pozemku – před zahájením stavby">
+              <span>Radonový průzkum pozemku – před zahájením stavby</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Měření radonu v dokončené stavbě – kolaudační měření">
+              <span>Měření radonu v dokončené stavbě – kolaudační měření</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Pedologický průzkum">
+              <span>Pedologický průzkum</span>
+            </label>
+
+            <label class="check-option">
+              <input type="checkbox" name="pruzkum" value="Nevím – potřebuji poradit">
+              <span>Nevím – potřebuji poradit</span>
+            </label>
+
+          </fieldset>
+
+          <label for="zprava">
+            <span>Doplňující informace <span class="optional">(nepovinné)</span></span>
+            <textarea id="zprava" name="zprava" placeholder="Stručně popište plánovanou stavbu nebo požadovaný průzkum"></textarea>
+          </label>
+
+          <label class="hp" for="web">
+            Toto pole nevyplňujte
+            <input id="web" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+
+          <input type="hidden" name="_subject" value="Nová poptávka z webu RPGEO">
+          <button class="button" type="submit">Odeslat poptávku</button>
+          <p class="privacy-note">
+            Odesláním formuláře souhlasíte se zpracováním uvedených údajů za účelem vyřízení poptávky.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© 2026 RPGEO | Ing. Radek Pohanka</div>
+    <div>Inženýrská geologie • Hydrogeologie • Radon</div>
+    <div>IČO: 68705743 • DIČ: CZ7103133829</div>
+  </div>
+</footer>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const errorSummary = document.getElementById('form-error-summary');
+  const requiredFields = [...contactForm.querySelectorAll('[required]')];
+
+  function validateField(field) {
+    const valueIsEmpty = !field.value.trim();
+    const valueIsInvalid = !valueIsEmpty && !field.validity.valid;
+    const isInvalid = valueIsEmpty || valueIsInvalid;
+    const error = document.getElementById(field.getAttribute('aria-describedby'));
+
+    field.setAttribute('aria-invalid', String(isInvalid));
+    if (error) {
+      error.textContent = valueIsEmpty
+        ? field.dataset.requiredMessage
+        : field.dataset.invalidMessage || 'Zkontrolujte prosím zadanou hodnotu.';
+      error.classList.toggle('visible', isInvalid);
+    }
+    return !isInvalid;
+  }
+
+  requiredFields.forEach(field => {
+    field.addEventListener('input', () => {
+      validateField(field);
+      const formIsValid = requiredFields.every(item => item.value.trim() && item.validity.valid);
+      errorSummary.classList.toggle('visible', !formIsValid && errorSummary.classList.contains('visible'));
+    });
+  });
+
+  contactForm.addEventListener('submit', event => {
+    const invalidFields = requiredFields.filter(field => !validateField(field));
+    if (invalidFields.length) {
+      event.preventDefault();
+      errorSummary.classList.add('visible');
+      invalidFields[0].focus();
+      return;
+    }
+    errorSummary.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
